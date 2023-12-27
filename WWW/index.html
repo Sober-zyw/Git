@@ -13,39 +13,40 @@
     // 简单理解：存储项目代码的仓库，源代码管理
     // 远程仓库：Github Gitee
 
-        /*
-          Git命令
+        /* Git命令
+            
             Git配置： 
-              全局配置
                 配置用户名：git config --global user.name xxx
                 配置邮箱：git config --global user.email xxx
                 查看配置项：git config --list
             
             Git初始化仓库(让Git去接管这个项目)：
-                命令框先cd进入文件目录，然后输入 git init 初始化成功
+                命令框先cd进入文件目录，然后输入 git init 初始化成功        
             
-            Git提交代码到暂存区
+            提交代码到暂存区
                 git add 文件路径
                 git add . (全部提交)
-                git status 查看提交的代码在暂存区的状态
+                git status 查看提交的代码在暂存区的状态        
             
-            Git提交暂存区代码到本地仓库
+            提交暂存区代码到本地仓库
                 git commit -m 注释
             
-            Git查看仓库的历史版本
+            查看仓库的历史版本
                 git log
-                git log --pretty=oneline (结果显示一行)
-    
-                按q退出
+                git log --pretty=oneline (结果显示一行) （按q退出）
     
             查看Git历史记录
                 git reflog
     
-            Git版本回退
+            版本回退
                 git reset --hard 版本号
     
-            Git将暂存区代码退到工作区
+            将暂存区代码退到工作区
                 git restore --staged 文件路径
+            
+            临时存储
+                git stash
+                git stash pop
             
           分支
               master 发布代码 1.0
@@ -63,7 +64,35 @@
                 git merge 要合并的分支名(dev)
             删除分支
                 git branch -D 要删除的分支名(dev)
-    
+          
+          远程操作
+              查看所有的远程库 
+                  git remote -v 
+              配置远程库
+                  git remote add 远程库名(origin) 远程库地址
+              删除远程库
+                  git remote remove 远程库名(origin)
+              把本地分支推到远程库
+                  git push 远程库名(origin) 分支名(master)
+              设置关闭SSL验证
+                  git config --global http.sslverify false
+              下载远程库
+                  git clone 远程库地址
+              拉取更新版本
+                  git pull 远程库名(origin) 分支名(master)
+              把远程库的新分支和本地库的新分支相关联
+                  git branch --set-upstream-to=origin/远程库分支名(dev) 新的本地库分支名(dev)
+          
+          协作开发
+              每次都先去拉取一下更新版本，然后通过地址下载所需的远程库，
+              git branch -r 可以查看远程库所有的分支，若远程库有新的分支(dev)，
+              恰好我们需要使用时，git branch dev 先在本地创建对应远程库中新的分支(dev)，
+              git branch --set-upstream-to=origin/远程库分支名(dev) 新的本地库分支名(dev)
+              然后把远程库里的新分支和新创建本地库的分支(dev)相关联，最后切换到要使用的分支(dev)
+
+          README.md 介绍文件 用于介绍你的项目实现了什么功能
+          .gitignore 忽略文件 忽略第三方下载的包
+       
         */
     </script>
 </body>
