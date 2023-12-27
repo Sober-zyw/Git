@@ -2,68 +2,70 @@
 <html lang="en">
 
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
 
 <body>
-  <script>
+    <script>
     // Git：一个开源的分布式版本控制系统，可以有效、高速地处理从很小到非常大的项目版本管理。
     // 简单理解：存储项目代码的仓库，源代码管理
     // 远程仓库：Github Gitee
 
-    /*
-      Git命令
-        Git配置： 
-          全局配置
-            配置用户名：git config --global user.name xxx
-            配置邮箱：git config --global user.email xxx
-            查看配置项：git config --list
-        
-        Git初始化仓库(让Git去接管这个项目)：
-            命令框先cd进入文件目录，然后输入 git init 初始化成功
-        
-        Git提交代码到暂存区
-            git add 文件路径
-            git add . (全部提交)
-            git status 查看提交的代码在暂存区的状态
-        
-        Git提交暂存区代码到本地仓库
-            git commit -m 注释
-        
-        Git查看仓库的历史版本
-            git log
-            git log --pretty=oneline (结果显示一行)
-
-        查看Git历史记录
-            git reflog
-
-        Git版本回退
-            git reset --hard 版本号
-
-        Git将暂存区代码退到工作区
-            git restore --staged 文件路径
-        
-      分支
-          master 发布代码 1.0
-          dev 开发 0.1 0.2 0.3
-          fixbug 突然出现bug 1.0.1
-          future 未来新功能
-
-        查看所有的分支
-            git branch 
-        创建新分支
-            git branch 分支名(dev)
-        切换到要使用的分支
-            git switch 分支名(dev)
-        合并分支
-            git merge 要合并的分支名(dev)
-        删除分支
-            git branch -D 要删除的分支名(dev)
-
-    */
-  </script>
+        /*
+          Git命令
+            Git配置： 
+              全局配置
+                配置用户名：git config --global user.name xxx
+                配置邮箱：git config --global user.email xxx
+                查看配置项：git config --list
+            
+            Git初始化仓库(让Git去接管这个项目)：
+                命令框先cd进入文件目录，然后输入 git init 初始化成功
+            
+            Git提交代码到暂存区
+                git add 文件路径
+                git add . (全部提交)
+                git status 查看提交的代码在暂存区的状态
+            
+            Git提交暂存区代码到本地仓库
+                git commit -m 注释
+            
+            Git查看仓库的历史版本
+                git log
+                git log --pretty=oneline (结果显示一行)
+    
+                按q退出
+    
+            查看Git历史记录
+                git reflog
+    
+            Git版本回退
+                git reset --hard 版本号
+    
+            Git将暂存区代码退到工作区
+                git restore --staged 文件路径
+            
+          分支
+              master 发布代码 1.0
+              dev 开发 0.1 0.2 0.3
+              fixbug 突然出现bug 1.0.1
+              future 未来新功能
+    
+            查看所有的分支
+                git branch 
+            创建新分支
+                git branch 分支名(dev)
+            切换到要使用的分支
+                git switch 分支名(dev)
+            合并分支
+                git merge 要合并的分支名(dev)
+            删除分支
+                git branch -D 要删除的分支名(dev)
+    
+        */
+    </script>
 </body>
 
 </html>
